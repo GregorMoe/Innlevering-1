@@ -1,7 +1,8 @@
 import math
 
-variabel = input("Hvilken variabel vil du finne? (E, m, v) ")
-if variabel == "E":
+variabel = input("Hvilken variabel vil du finne? (E, m, v) ") #spør hvilken variabel som er den ukjente
+
+if variabel == "E": #spør om de to kjente variablene og beregner den ukjente. printer den ukjente
     m = float(input("Hva er massen (m) til objektet oppgitt i kg? "))
     v = float(input("Hva er farten (v) til objektet oppgitt i m/s? "))
     E = m * v**2 / 2
@@ -16,5 +17,5 @@ elif variabel == "v":
     m = float(input("Hva er massen til objektet i kg? "))
     v = math.sqrt(2 * E / m)
     print("Farten til objektet er " + str(v) + " m/s. ")
-else:
-    print("Noe du skrev inn var feil. Husk å bruke '.' i stedet for ',' og uten mellomrom. ")
+else: #hvis inputet ikke var E, m eller v
+    print("Noe du skrev inn var feil. Husk at Python er case-sensitive! ")
